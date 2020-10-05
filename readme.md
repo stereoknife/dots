@@ -1,0 +1,3 @@
+# Dots
+
+Config dotfiles collection
