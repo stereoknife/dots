@@ -1,0 +1,4 @@
+#!/bin/sh
+cp .zshrc ~
+mkdir -p ~/.config/zsh
+cp plugins ~/.config/zsh
