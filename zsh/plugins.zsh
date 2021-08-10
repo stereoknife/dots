@@ -1,6 +1,12 @@
 OLD_PATH=$PATH
 
 source $ZSHCONF/plugins/antigen.zsh
+
+if [ -f !$HOME/ZSH_LOAD_PLUGINS ] ; then
+    antigen apply
+    return 1
+fi
+
 source $ZSHCONF/plugins/abbr_pwd
 
 # Load oh-my-zsh's library.

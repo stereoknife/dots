@@ -1,8 +1,6 @@
 ZSHCONF=$HOME/.config/zsh
 
-source $ZSHCONF/plugins/plugins.zsh
-PROMPT='%F{39}[%m][%~] %f%# '
-export PATH=$PATH:$HOME/.local/bin
+source $ZSHCONF/plugins.zsh
 
 # Key bindings
 bindkey -v
@@ -13,3 +11,6 @@ SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
 export EDITOR="nvim"
+
+source $ZSHCONF/path.zsh
+source $ZSHCONF/prompt.zsh

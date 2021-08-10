@@ -1,31 +1,13 @@
-#!/bin/sh
-cp .zshrc ~
-mkdir -p ~/.config/zsh
-cp plugins ~/.config/zsh
-. ~/.zshrc
+#!/usr/bin/env zsh
+mkdir -p $HOME/.config/zsh
+cp .zshrc $HOME
 
-OLDPATH=$PATH
-source $ZSHCONF/plugins/antigen.zsh
-source $ZSHCONF/plugins/abbr_pwd
+cp path.zsh $HOME/.config/zsh
+cp plugins.zsh $HOME/.config/zsh
+cp prompt.zsh $HOME/.config/zsh
 
-# Load oh-my-zsh's library.
-antigen use oh-my-zsh
+cp -r plugins $HOME/.config/zsh
 
-# Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle git
-antigen bundle pip
-antigen bundle command-not-found
+touch $HOME/ZSH_LOAD_PLUGINS
 
-# Syntax highlighting bundle.
-antigen bundle zsh-users/zsh-syntax-highlighting
-
-# Add fish-like path abbreviation
-antigen bundle felixgravila/zsh-abbr-path
-
-# Show command completion suggestions
-antigen bundle zsh-users/zsh-autosuggestions
-
-# Tell Antigen that you're done.
-antigen apply
-
-PATH=$OLDPATH
+source $HOME/.zshrc
