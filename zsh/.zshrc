@@ -14,3 +14,4 @@ export EDITOR="nvim"
 
 source $ZSHCONF/path.zsh
 source $ZSHCONF/prompt.zsh
+source $ZSHCONF/alias.zsh
